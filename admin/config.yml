@@ -1,0 +1,20 @@
+# admin/config.yml
+
+backend:
+  name: github
+  repo: USERNAME/NAMA_REPO # GANTI INI! Contoh: sipintarbot/chatbot-announcement-page
+  branch: main # Branch utama Anda
+
+media_folder: "assets/images" # Folder untuk menyimpan gambar yang di-upload
+public_folder: "/assets/images" # Path publik untuk gambar
+
+collections:
+  - name: "pages"
+    label: "Halaman"
+    files:
+      - file: "index.html"
+        label: "Halaman Pengumuman"
+        name: "announcement"
+        fields:
+          - {label: "Judul Halaman (untuk SEO)", name: "title", widget: "string", default: "Pesan Server"}
+          - {label: "Konten Utama", name: "body", widget: "markdown"}
